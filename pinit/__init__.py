@@ -9,6 +9,7 @@ if environ.get('DEBUG', False):
     except ImportError:
         pass
 
+
 class Configuration(object):
     DEBUG = bool(environ.get('DEBUG', False))
     SECRET_KEY = environ.get('SECRET_KEY', None)
