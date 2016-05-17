@@ -9,9 +9,7 @@ setup(
     author_email="kern@mateuskern.com",
     packages=find_packages(exclude=['tests*']),
     install_requires=[
-        "Flask==0.10.1",
-        "Flask-User==0.6.8",
-        "gunicorn==19.4.1",
-        "flask-debugtoolbar==0.10.0"
+        "Flask-SQLAlchemy==2.1",
+        "Flask-Security==1.7.5",
     ],
 )
