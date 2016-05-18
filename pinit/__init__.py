@@ -26,6 +26,12 @@ class Configuration(object):
 
     USER_APP_NAME = 'Pinit'
 
+    SECURITY_REGISTERABLE = True
+    SECURITY_RECOVERABLE = True
+    SECURITY_CHANGEABLE = True
+    SECURITY_PASSWORD_HASH = environ.get('PASSWORD_HASH', 'plaintext')
+    SECURITY_PASSWORD_SALT = environ.get('PASSWORD_SALT', None)
+
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app.config.from_object('pinit.Configuration')
 
